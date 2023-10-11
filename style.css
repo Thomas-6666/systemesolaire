@@ -2,21 +2,20 @@ body {
     background-color: #000020;
 }
 
-.description {
-    position: relative;
-    padding: 1% 20%;
-    margin: 45% 10% 1%;
-    background-color: whitesmoke;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgb(0, 0, 0);
-}
-
 .systeme {
     display: flex;
     justify-content: center;
-    z-index: 0;
     align-items: center;
     margin-top: 35%;
+}
+
+.description {
+    display: none;
+    padding: 1%;
+    width: max-content;
+    background-color: rgba(245, 245, 245, 0.3);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgb(0, 0, 0);
 }
 
 .soleil {
@@ -27,7 +26,11 @@ body {
     border-radius: 50%;
 }
 
-.soleil:hover + .description::after {
+.systeme:hover + .description{
+    display: block;
+}
+
+.soleil:hover + .description::after{
     content: "Soleil";
     font-family: Arial sans-serif;
 }
@@ -57,8 +60,9 @@ body {
     width: 15px;
 }
 
-.mercure:hover + .description::after {
+.mercureorbite:hover + .description::after{
     content: "Mercure";
+    font-family: Arial sans-serif;
 }
 
 .venusorbite {
@@ -74,10 +78,10 @@ body {
     width: 30px;
 }
 
-.venus:hover + .description::after {
+.venusorbite:hover + .description::after{
     content: "Venus";
+    font-family: Arial sans-serif;
 }
-
 .terreorbite {
     z-index: -3;
     width: 375px;
@@ -92,8 +96,9 @@ body {
     animation: rotate 10s normal linear infinite;
 }
 
-.terre:hover + .description::after {
+.terreorbite:hover + .description::after{
     content: "Terre";
+    font-family: Arial sans-serif;
 }
 
 .lune {
@@ -120,8 +125,9 @@ body {
     width: 20px;
 }
 
-.mars:hover + .description::after {
+.marsorbite:hover + .description::after{
     content: "Mars";
+    font-family: Arial sans-serif;
 }
 
 .jupiterorbite {
@@ -137,8 +143,9 @@ body {
     width: 100px;
 }
 
-.jupiter:hover + .description::after {
+.jupiterorbite:hover + .description::after{
     content: "Jupiter";
+    font-family: Arial sans-serif;
 }
 
 .saturneorbite {
@@ -156,8 +163,9 @@ body {
     align-items: center;
 }
 
-.saturne:hover + .description::after {
+.saturneorbite:hover + .description::after{
     content: "Saturne";
+    font-family: Arial sans-serif;
 }
 
 .anneau {
@@ -180,8 +188,9 @@ body {
     width: 80px;
 }
 
-.uranus:hover + .description::after {
+.uranusorbite:hover + .description::after{
     content: "Uranus";
+    font-family: Arial sans-serif;
 }
 
 .neptuneorbite {
@@ -197,8 +206,9 @@ body {
     width: 70px;
 }
 
-.nepture:hover + .description::after {
+.neptuneorbite:hover + .description::after{
     content: "Neptune";
+    font-family: Arial sans-serif;
 }
 
 @keyframes rotate {
