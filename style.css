@@ -6,10 +6,12 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 35%;
+    margin-top: 45%;
 }
 
 .description {
+    position: absolute;
+    top: 1%;
     display: none;
     padding: 1%;
     width: max-content;
@@ -20,19 +22,38 @@ body {
 
 .soleil {
     width: 150px;
-    z-index: 10;
+    z-index: 1;
     aspect-ratio: 1/1;
     background-color: darkorange;
     border-radius: 50%;
 }
 
-.systeme:hover + .description{
+.soleil:hover{
+    border: 3px solid white;
+}
+
+.orbite:hover + .description{
     display: block;
 }
 
-.soleil:hover + .description::after{
+.soleil:hover + .description{
+    display: block;
+}
+
+.description::after{
+    font-size: 14px;
+    font-family: Arial, serif;
+    white-space: pre;
+    content: "\aLorem ipsum est, en imprimerie, une suite de mots sans signification utilisée à titre provisoire"
+    "\a pour calibrer une mise en page, le texte définitif venant remplacer le faux-texte dès qu'il est prêt ou"
+    "\a que la mise en page est achevée. Généralement, on utilise un texte en faux latin, le Lorem ipsum ou Lipsum."
+}
+
+.soleil:hover + .description::before{
+    font-size: 24px;
+    font-family: Arial, serif;
+    font-weight: bold;
     content: "Soleil";
-    font-family: Arial sans-serif;
 }
 
 .orbite {
@@ -45,6 +66,10 @@ body {
 .planete {
     border-radius: 50%;
     aspect-ratio: 1/1;
+}
+
+.planete:hover{
+    border: 3px solid white;
 }
 
 .mercureorbite {
@@ -60,9 +85,11 @@ body {
     width: 15px;
 }
 
-.mercureorbite:hover + .description::after{
+.mercureorbite:hover + .description::before{
+    font-size: 24px;
+    font-family: Arial, serif;
+    font-weight: bold;
     content: "Mercure";
-    font-family: Arial sans-serif;
 }
 
 .venusorbite {
@@ -78,10 +105,13 @@ body {
     width: 30px;
 }
 
-.venusorbite:hover + .description::after{
+.venusorbite:hover + .description::before{
+    font-size: 24px;
+    font-family: Arial, serif;
+    font-weight: bold;
     content: "Venus";
-    font-family: Arial sans-serif;
 }
+
 .terreorbite {
     z-index: -3;
     width: 375px;
@@ -96,9 +126,11 @@ body {
     animation: rotate 10s normal linear infinite;
 }
 
-.terreorbite:hover + .description::after{
+.terreorbite:hover + .description::before{
+    font-size: 24px;
+    font-family: Arial, serif;
+    font-weight: bold;
     content: "Terre";
-    font-family: Arial sans-serif;
 }
 
 .lune {
@@ -108,7 +140,10 @@ body {
     background-color: gray;
 }
 
-.lune:hover + .description::after {
+.lune:hover + .description::before {
+    font-size: 24px;
+    font-family: Arial, serif;
+    font-weight: bold;
     content: "Lune";
 }
 
@@ -125,9 +160,11 @@ body {
     width: 20px;
 }
 
-.marsorbite:hover + .description::after{
+.marsorbite:hover + .description::before{
+    font-size: 24px;
+    font-family: Arial, serif;
+    font-weight: bold;
     content: "Mars";
-    font-family: Arial sans-serif;
 }
 
 .jupiterorbite {
@@ -143,9 +180,11 @@ body {
     width: 100px;
 }
 
-.jupiterorbite:hover + .description::after{
+.jupiterorbite:hover + .description::before{
+    font-size: 24px;
+    font-family: Arial, serif;
+    font-weight: bold;
     content: "Jupiter";
-    font-family: Arial sans-serif;
 }
 
 .saturneorbite {
@@ -163,9 +202,11 @@ body {
     align-items: center;
 }
 
-.saturneorbite:hover + .description::after{
+.saturneorbite:hover + .description::before{
+    font-size: 24px;
+    font-family: Arial, serif;
+    font-weight: bold;
     content: "Saturne";
-    font-family: Arial sans-serif;
 }
 
 .anneau {
@@ -188,9 +229,11 @@ body {
     width: 80px;
 }
 
-.uranusorbite:hover + .description::after{
+.uranusorbite:hover + .description::before{
+    font-size: 24px;
+    font-family: Arial, serif;
+    font-weight: bold;
     content: "Uranus";
-    font-family: Arial sans-serif;
 }
 
 .neptuneorbite {
@@ -206,9 +249,11 @@ body {
     width: 70px;
 }
 
-.neptuneorbite:hover + .description::after{
+.neptuneorbite:hover + .description::before{
+    font-size: 24px;
+    font-family: Arial, serif;
+    font-weight: bold;
     content: "Neptune";
-    font-family: Arial sans-serif;
 }
 
 @keyframes rotate {
